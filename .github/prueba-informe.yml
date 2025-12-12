@@ -1,0 +1,19 @@
+name: Prueba GitHub Actions - Informe Académico
+
+on: [push]
+
+jobs:
+  saludo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v4
+
+      - name: Mensaje de bienvenida
+        run: echo "¡GitHub Actions está corriendo en la nube! Informe académico 2025"
+
+      - name: Información del entorno
+        run: |
+          echo "Fecha actual: $(date)"
+          echo "Sistema operativo: $(uname -a)"
+          echo "Usuario: $(whoami)"
