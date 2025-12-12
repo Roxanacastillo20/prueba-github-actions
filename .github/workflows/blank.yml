@@ -1,0 +1,21 @@
+name: Prueba GitHub Actions - Informe Académico
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  saludo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      - name: Mensaje de éxito
+        run: echo "¡GitHub Actions funciona perfectamente! Informe académico 2025"
+
+      - name: Información del sistema
+        run: |
+          echo "Fecha y hora: $(date)"
+          echo "Sistema operativo: $(uname -a)"
+          echo "Directorio: $(pwd)"
